@@ -1,0 +1,13 @@
+.portfolioTitle{
+  width: 100%;
+}
+
+.zoomable-container:hover .zoomable-image {
+  transform: scale(1.05); /* Adjust the scale value as needed */
+}
+
+/* This class is for the image itself */
+.zoomable-image {
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+  display: block; /* Ensures that the image takes up the full width of its container */
+}

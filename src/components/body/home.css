@@ -1,0 +1,132 @@
+
+.image{
+  width: auto !important;
+  height: 100vh !important;
+}
+
+
+#home::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px; /* This determines how tall the fade effect is */
+  background: linear-gradient(transparent, #212529); /* Change 'white' to match your page's background color */
+  pointer-events: none; /* Ensures clicks go through to elements underneath */
+}
+
+
+.homeBox{
+  width: 100%;
+  top: 30%;
+}
+
+.bigText{
+  font-size: 5em;
+}
+
+.typing-cursor {
+  font-weight: bold;
+  color: #fff; /* Or any other color */
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px; /* Position where you want the indicator to appear */
+  left: 50%;
+  transform: translateX(-50%); /* Center the indicator */
+  font-size: 24px; /* Or the size of your image/icon */
+  color: #ffffff; /* Color of your "v" */
+  animation: bounce 2s infinite; /* Apply the bounce animation */
+  user-select: none; /* Prevent text selection */
+  cursor: pointer; /* Suggests to the user that it's interactive */
+}
+
+
+
+
+
+.homeDiv {
+  min-height: 100vh;
+}
+
+.colorBlock {
+  position: absolute;
+  top: 15%;
+  left: -5%;
+  width: 110%;
+  height: 70%;
+  z-index: -1;
+}
+
+.outDiv {
+  position: relative;
+  z-index: 2;
+}
+
+.homeTitle {
+  font-size: 60px;
+  line-height: 60px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .homeTitle {
+    font-size: 45px;
+    line-height: 45px;
+    position: relative;
+  }
+}
+@media (max-width: 576px) {
+  .homeTitle {
+    font-size: 35px !important;
+    line-height: 45px;
+    position: relative;
+  }
+}
+
+
+.outDiv > * {
+  transition: transform 0.2s;
+  will-change: transform;
+}
+
+
+
+@media (min-width: 576px) {
+  .homeTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 30%;
+    background-color: #000;
+  }
+}
+
+
+.sign{
+  font-family: 'Brush Script MT';
+}

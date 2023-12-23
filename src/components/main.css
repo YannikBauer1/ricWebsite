@@ -1,0 +1,69 @@
+
+
+.title {
+    position: relative;
+}
+
+.smallText {
+    font-size: small;
+}
+
+.headerLine{
+    width: 140px;
+    height: 4px;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    height: 3px;
+    width: 80%;
+    background-color: #000;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    height: 5px;
+    width: 10%;
+    background-color: #000;
+}
+
+.textSmall{
+    font-size:smaller;
+}
+
+
+
+.description {
+    width: 40%;
+}
+
+.width1 {
+    width: 50%;
+}
+
+.width2 {
+    width: 60%;
+}
+
+.width3 {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .description {
+        width: 60%;
+    }
+    .width1 {
+        width: 80%;
+    }
+    .width2 {
+        width: 80%;
+    }
+}
